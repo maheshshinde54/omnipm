@@ -1,5 +1,4 @@
 # OmniPM
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/maheshshinde54/omnipm)
 
 OmniPM is a backend service for a project management application, built with Java and the Spring Boot framework. It provides a RESTful API for managing users and their timesheets.
 
