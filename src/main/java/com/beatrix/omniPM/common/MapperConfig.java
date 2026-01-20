@@ -1,4 +1,4 @@
-package com.beatrix.omniPM.user.config;
+package com.beatrix.omniPM.common;
 
 
 import org.modelmapper.ModelMapper;

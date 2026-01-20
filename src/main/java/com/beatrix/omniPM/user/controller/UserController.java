@@ -9,8 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping(path = "/user")
@@ -26,10 +25,8 @@ public class UserController
     @GetMapping(path = "/{userId}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long userId)
     {
-        //return new UserDTO(userId, "Mahesh", "mahesh@gamil.com", 30, LocalDate.of(2024, 11, 8), true);
-
         return userService.getUserById(userId)
-                .map(userDTO -> ResponseEntity.ok(userDTO))
+                .map(ResponseEntity::ok)
         .orElseThrow(()->new ResourceNotFoundException("User not found with id : "+userId));
     }
 
